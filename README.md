@@ -1,4 +1,6 @@
-![image](https://github.com/FAR-Lab/SSUP-HRI/assets/20778137/ce9ee508-4a56-417d-8178-2241860686c8)
+![A trash barrel robot among passersby on a New York City sidewalk](./assets/img/street.jpg)
+
+**Project website:** https://irl-ct.github.io/SSUP-HRI/
 
 ## Social Signaling in Urban Public Human-Robot Interaction dataset
 

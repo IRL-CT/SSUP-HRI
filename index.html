@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSUP-HRI: Social Signaling in Urban Public Human-Robot Interaction</title>
+<meta name="description" content="A dataset of naturalistic human-robot interaction: about 25 hours of 360° video and over 800 annotated interactions recorded by trash barrel robots in New York City plazas.">
+<meta property="og:title" content="SSUP-HRI dataset">
+<meta property="og:description" content="About 25 hours of 360° video and over 800 annotated interactions, recorded by trash barrel robots in New York City plazas.">
+<meta property="og:image" content="assets/img/interaction_gallery.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="SSUP-HRI home">SSUP-HRI</a>
+  <nav aria-label="Sections">
+    <a href="#dataset">Dataset</a>
+    <a href="#deployments">Deployments</a>
+    <a href="#robot">Robot</a>
+    <a href="#publications">Publications</a>
+    <a class="nav-cta" href="#access">Request access</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-media">
+    <video class="loop" autoplay muted loop playsinline poster="assets/img/interaction_gallery.jpg"
+           aria-label="Mosaic of short clips recorded from the robots' point of view as people in a plaza react to them">
+      <source src="assets/video/interaction_gallery.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-text">
+    <h1>Social Signaling in Urban Public Human-Robot Interaction</h1>
+    <p class="lede">What people do when a trash barrel rolls up to them in a New York City plaza, recorded from the barrel's point of view.</p>
+    <p class="hero-actions">
+      <a class="btn" href="#access">Request access</a>
+      <a class="btn btn-quiet" href="https://github.com/IRL-CT/SSUP-HRI">View on GitHub</a>
+    </p>
+  </div>
+</section>
+
+<section class="band" id="dataset">
+  <div class="wrap two">
+    <div>
+      <h2>The dataset</h2>
+      <p>SSUP-HRI captures human-robot interaction in urban public settings. We deployed two mobile trash barrel robots in public plazas in New York City and recorded what happened around them. The footage carries social signals that can be analyzed for insight into naturalistic HRI.</p>
+      <p>To our knowledge, this is the first dataset showing robot deployments in completely public, non-controlled settings with urban residents.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Footage</dt><dd>About 25 hours</dd></div>
+      <div><dt>Annotated interactions</dt><dd>Over 800</dd></div>
+      <div><dt>Format</dt><dd>360° video and audio, robot's point of view</dd></div>
+      <div><dt>Sites</dt><dd id="fact-sites">Two plazas in New York City</dd></div>
+      <div><dt>Sessions</dt><dd id="fact-sessions">Ten, one to two hours each</dd></div>
+      <div><dt>Access</dt><dd>On request, for research use</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band band-plain" id="samples">
+  <div class="wrap">
+    <h2>Sample clips</h2>
+    <div class="clips">
+      <figure>
+        <video class="loop" autoplay muted loop playsinline poster="assets/img/10-12-clip19_1.jpg"
+               aria-label="Seen from inside the barrel's rim, people seated at plaza tables turn to look at the robot">
+          <source src="assets/video/10-12-clip19_1.mp4" type="video/mp4">
+        </video>
+        <figcaption>People at plaza tables turn toward the robot as it approaches.</figcaption>
+      </figure>
+      <figure>
+        <video class="loop" autoplay muted loop playsinline poster="assets/img/middle_finger.jpg"
+               aria-label="People seated on plaza benches as the robot passes; one gestures at it">
+          <source src="assets/video/middle_finger.mp4" type="video/mp4">
+        </video>
+        <figcaption>Not every reaction is friendly: a seated passerby gestures the robot away.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="deployments">
+  <div class="wrap">
+    <h2>Deployments</h2>
+    <p class="section-intro">Each line below is one recording session. More deployments will be added here as they are released.</p>
+    <div class="sites" id="sites"></div>
+    <noscript><p>Astor Place, Manhattan: Sep 21, Sep 26, Sep 28, Oct 6, Oct 12, 2022. Albee Square, Brooklyn: Jul 6, Jul 7, Jul 11, Jul 12, Jul 14, 2023.</p></noscript>
+  </div>
+</section>
+
+<section class="band band-plain" id="robot">
+  <div class="wrap two">
+    <div class="robot-media">
+      <video class="loop" autoplay muted loop playsinline poster="assets/img/trashbot-animation_1.jpg"
+             aria-label="Animation: a hoverboard, dolly, single-board computer, trash barrel and 360 camera stack into a robot; a black and a blue barrel robot stand side by side">
+        <source src="assets/video/trashbot-animation_1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div>
+      <h2>The robot</h2>
+      <p>Each robot is an ordinary trash barrel on a dolly, driven by a recycled hoverboard. The metal chassis holds up on outdoor plaza paving. A researcher steers the robot remotely, so its behavior looks autonomous to people nearby.</p>
+      <ul class="spec">
+        <li><b>Camera</b> <span><a href="https://www.insta360.com/product/insta360-oner_twin-edition">Insta360 One R</a> with built-in microphones, mounted on the barrel rim</span></li>
+        <li><b>Drive</b> <span>Recycled hoverboard motors under a dolly</span></li>
+        <li><b>Computer</b> <span>Raspberry Pi 4, Ubuntu 20.04 Server, ROS 1 Noetic</span></li>
+      </ul>
+      <p>The base is open hardware. Build instructions, the bill of materials and software are documented at the <a href="https://irl.tech.cornell.edu/mobile_hoverboard_robot_base/">Mobile Hoverboard Robot Base</a> site.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-access" id="access">
+  <div class="wrap two">
+    <div>
+      <h2>Request access</h2>
+      <p>We are happy to share the data with interaction researchers. The videos are unaltered and include people's faces and voices, so access goes through a data use agreement.</p>
+      <ol class="steps">
+        <li>Get IRB approval, or the equivalent at your institution, for secondary use of the data.</li>
+        <li>Sign the data use agreement and email it to Frank Bu, with your IRB protocol if you have one and a short description of the analyses you plan.</li>
+      </ol>
+      <p class="hero-actions">
+        <a class="btn" href="SSUP-HRI%20Data%20Use%20Agreement.pdf">Download the agreement (PDF)</a>
+        <a class="btn btn-quiet" href="mailto:fb266@cornell.edu?subject=SSUP-HRI%20data%20access%20request">Email fb266@cornell.edu</a>
+      </p>
+    </div>
+    <div class="terms">
+      <h3>What you agree to</h3>
+      <ul>
+        <li>Research use only, no commercial use</li>
+        <li>Secure storage of the data</li>
+        <li>Credit the dataset and its funding sources in publications</li>
+        <li>No sharing with anyone who has not signed the agreement</li>
+        <li>Tell the research team before starting new analyses</li>
+      </ul>
+      <p class="fine">This is a summary. The agreement itself is the binding text. The data is free of charge and provided as is.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-plain" id="publications">
+  <div class="wrap">
+    <h2>Related publications</h2>
+    <ul class="pubs">
+      <li><a href="https://dl.acm.org/doi/full/10.1145/3613904.3642610">Trash in Motion: Emergent Interactions with a Robotic Trashcan</a><span>Barry Brown et al. Proceedings of the CHI Conference on Human Factors in Computing Systems, 2024.</span></li>
+      <li><a href="https://dl.acm.org/doi/full/10.1145/3613905.3651044">Field Notes on Deploying Research Robots in Public Spaces</a><span>Fanjun Bu et al. Extended Abstracts of the CHI Conference on Human Factors in Computing Systems, 2024.</span></li>
+      <li><a href="https://dl.acm.org/doi/abs/10.1145/3568294.3580206">Trash Barrel Robots in the City</a><span>Fanjun Bu et al. Companion of the ACM/IEEE International Conference on Human-Robot Interaction, 2023.</span></li>
+    </ul>
+  </div>
+</section>
+<figure class="street">
+  <img src="assets/img/street.jpg" width="1501" height="363" alt="A grey trash barrel robot on a New York sidewalk in front of a poster-covered wall, with passersby standing around it and a street sweeper beside it">
+  <figcaption>A trash barrel robot among passersby on a New York City sidewalk.</figcaption>
+</figure>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Maintained by Fanjun (Frank) Bu, <a href="mailto:fb266@cornell.edu">fb266@cornell.edu</a>. A project of the <a href="https://irl.tech.cornell.edu/">Interaction Research Lab at Cornell Tech</a>.</p>
+  </div>
+</footer>
+
+<script src="data/deployments.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
