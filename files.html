@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>File structure of the SSUP-HRI dataset</title>
+<meta name="description" content="How the SSUP-HRI dataset is organized into sites, sessions and video files.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="mark" href="index.html" aria-label="SSUP-HRI home">SSUP-HRI</a>
+  <nav aria-label="Sections">
+    <a href="index.html#dataset">Dataset</a>
+    <a href="index.html#deployments">Deployments</a>
+    <a href="files.html" aria-current="page">Files</a>
+    <a href="index.html#robot">Robot</a>
+    <a href="index.html#publications">Publications</a>
+    <a class="nav-cta" href="index.html#access">Request access</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="band files-head">
+  <div class="wrap">
+    <h1>How the files are organized</h1>
+    <p>The dataset is one folder per deployment site, and inside it one folder per recording session. The two sites are laid out a little differently, so each has an example below. The files themselves are shared after a signed data use agreement. <a href="index.html#access">Request access</a>.</p>
+  </div>
+</section>
+
+<section class="band band-plain">
+  <div class="wrap two">
+    <div>
+      <h2>Astor Place</h2>
+      <p>One folder per session day, named by date. The session of September 26, 2022 is shown as the example. Other sessions follow the same idea, though folder names and nesting vary a little from day to day.</p>
+      <ul class="tree">
+        <li><b>Astor_Place/</b>
+          <ul>
+            <li><b>2022-09-21-astor-place/</b></li>
+            <li><b>2022-09-26-astor-place/</b>
+              <ul>
+                <li><b>onboard_camera/</b> <span>360° video from the camera on each robot</span>
+                  <ul>
+                    <li>202209-26-landfill.mp4</li>
+                    <li>202209-26-recycle.mp4</li>
+                  </ul>
+                </li>
+                <li><b>clips/</b> <span>short clips cut from the session video</span>
+                  <ul>
+                    <li>clip1.mp4</li>
+                    <li>clip2.mp4</li>
+                    <li>…</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><b>2022-09-28-astor-place/</b></li>
+            <li><b>2022-10-06-astor-place/</b></li>
+            <li><b>2022-10-12-astor-place/</b></li>
+            <li>updated_clip_log_gsheet.xlsx <span>annotations, one sheet per session</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>Albee Square</h2>
+      <p>Three folders per session day, named month-day: one for each robot and one for interviews. July 12, 2023 is shown as the example.</p>
+      <ul class="tree">
+        <li><b>Albee_Square/</b>
+          <ul>
+            <li><b>7-6-…/</b>, <b>7-7-…/</b>, <b>7-11-…/</b>, <b>7-14-…/</b> <span>same three folders for each day</span></li>
+            <li><b>7-12-landfill/</b> <span>the landfill robot</span>
+              <ul>
+                <li>VID_20230110_180712_00_001.mp4</li>
+                <li>VID_20230110_191735_00_002.mp4</li>
+              </ul>
+            </li>
+            <li><b>7-12-recycle/</b> <span>the recycling robot</span>
+              <ul>
+                <li>VID_20230504_143828_00_001.mp4</li>
+                <li>VID_20230504_154852_00_002.mp4</li>
+              </ul>
+            </li>
+            <li><b>7-12-interview/</b> <span>interviews recorded that day</span></li>
+            <li>Trashbot Video Annotations updated.xlsx <span>annotations, one sheet per robot per day</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Reading the file names</h2>
+    <p>Some video files keep the name the camera gave them: <b>VID_</b>, then the date and time on the camera's clock, then a part number. At Albee Square the camera clocks were not set, so the date in a file name does not match the day of recording. Go by the folder name for the session date.</p>
+    <p>The annotation sheets give the start and end time of each interaction within the video. The Albee Square sheet also names the video file for each one.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Maintained by Fanjun (Frank) Bu, <a href="mailto:fb266@cornell.edu">fb266@cornell.edu</a>. A project of the <a href="https://irl.tech.cornell.edu/">Interaction Research Lab at Cornell Tech</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
